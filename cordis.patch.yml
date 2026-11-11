@@ -1,0 +1,12 @@
+- insert:
+    - id: obsidian-notes
+      name: 'dsh-obsidian-notes'
+      config:
+        vault: ''
+        dailyFolder: 日记
+        sections:
+          - 早上
+          - 下午
+          - 晚上
+        dateHeading: true
+        readOnly: false

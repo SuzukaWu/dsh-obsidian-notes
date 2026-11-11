@@ -1,0 +1,66 @@
+{
+  "name": "dsh-obsidian-notes",
+  "version": "0.2.0",
+  "description": "Obsidian notes for DeepSeek Harness — read and write your Obsidian vault from any conversation: daily notes, project notes, full-text search, and task check-off.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./icon": "./icon.svg",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "obsidian",
+    "notes",
+    "markdown",
+    "vault",
+    "daily-notes",
+    "pkm"
+  ],
+  "license": "MIT",
+  "author": "SuzukaWu",
+  "icon": "./icon.svg",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuzukaWu/dsh-obsidian-notes.git"
+  },
+  "homepage": "https://github.com/SuzukaWu/dsh-obsidian-notes#readme",
+  "bugs": {
+    "url": "https://github.com/SuzukaWu/dsh-obsidian-notes/issues"
+  },
+  "engines": {
+    "dsh": "^0.2.1-rc.1 || ^0.2.2-alpha.2",
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  }
+}
